@@ -4,7 +4,7 @@ import Table from "./components/table";
 import Title from "./components/title/title";
 import data from "./data/db";
 
-function App() {
+function App(): JSX.Element {
   return (
     <Container>
       <header className="mx-8 mb-4">

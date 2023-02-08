@@ -5,7 +5,7 @@ interface Props {
   className?: string;
 }
 
-const Title = ({ children, className }: Props) => {
+const Title = ({ children, className }: Props): JSX.Element => {
   return <p className={twMerge("text-xl font-bold", className)}>{children}</p>;
 };
 

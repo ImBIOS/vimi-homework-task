@@ -8,7 +8,7 @@ interface Props {
   rowPerPage?: number;
 }
 
-const Table = ({ data, className, rowPerPage = 5 }: Props) => {
+const Table = ({ data, className, rowPerPage = 5 }: Props): JSX.Element => {
   return (
     <section className={twMerge("w-full", className)}>
       <TableHead />

@@ -1,6 +1,6 @@
-interface Props {}
+type Props = {};
 
-const TableHead = (props: Props) => {
+const TableHead = (props: Props): JSX.Element => {
   return (
     <section className="mb-4 w-full rounded-lg bg-gray-100 text-left font-semibold">
       <div className="mx-4 grid grid-cols-6 gap-4 py-3 pr-2 pl-4">

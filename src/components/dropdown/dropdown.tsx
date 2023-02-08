@@ -10,7 +10,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Dropdown = ({ children }: Props) => {
+const Dropdown = ({ children }: Props): JSX.Element => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>

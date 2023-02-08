@@ -15,7 +15,7 @@ export interface ITableBodyData {
   archived: boolean;
 }
 
-const TableBody = ({ data, rowPerPage = 5 }: TableBodyProps) => {
+const TableBody = ({ data, rowPerPage = 5 }: TableBodyProps): JSX.Element => {
   const [page, setPage] = useState({
     current: 1,
     first: 1,
