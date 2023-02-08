@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# VIMI Homework Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is a simple React app that displays a list of projects and their details. The app is using [Tailwind CSS](https://tailwindcss.com/) for styling.
 
 ## Available Scripts
 
