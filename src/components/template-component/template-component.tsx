@@ -1,4 +1,4 @@
-type Props = {};
+interface Props {}
 
 const TemplateComponent = (props: Props) => {
   return <div>TemplateComponent</div>;

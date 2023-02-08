@@ -13,7 +13,7 @@ function App() {
         </Title>
         <p>Here are the list of projects you submitted.</p>
       </header>
-      <section className="px-4 py-8 backdrop-filter bg-opacity-40 rounded-lg backdrop-blur-lg bg-white">
+      <section className="rounded-lg bg-white bg-opacity-40 px-4 py-8 backdrop-blur-lg backdrop-filter">
         <section className="flex justify-between">
           <Title className="ml-4">Recent Projects</Title>
           <Dropdown>Sort by</Dropdown>

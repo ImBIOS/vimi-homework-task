@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import TemplateComponent from "./template-component";
+import { render, screen } from "@testing-library/react";
 
 test("renders copmonent", () => {
   render(<TemplateComponent />);

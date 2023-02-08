@@ -1,12 +1,12 @@
 import React from "react";
 
-type Props = {
+interface Props {
   children: React.ReactNode;
-};
+}
 
 const Container = ({ children }: Props) => {
   return (
-    <main className="bg-gradient-to-tr from-indigo-200 via-red-200 to-yellow-100 min-h-screen p-4">
+    <main className="min-h-screen bg-gradient-to-tr from-indigo-200 via-red-200 to-yellow-100 p-4">
       {children}
     </main>
   );

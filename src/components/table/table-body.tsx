@@ -1,10 +1,10 @@
 import { AdjustmentsHorizontalIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 
-type TableBodyProps = {
+interface TableBodyProps {
   data: ITableBodyData[];
   rowPerPage?: number;
-};
+}
 
 export interface ITableBodyData {
   id: string;
@@ -39,17 +39,17 @@ const TableBody = ({ data, rowPerPage = 5 }: TableBodyProps) => {
         return (
           <div
             key={project.id}
-            className="grid grid-cols-6 gap-4 bg-white text-left font-semibold pr-6 py-3 pl-8 mb-4 rounded-lg"
+            className="mb-4 grid grid-cols-6 gap-4 rounded-lg bg-white py-3 pr-6 pl-8 text-left font-semibold"
           >
-            <div className="col-span-1 lg:col-span-2 truncate">
+            <div className="col-span-1 truncate lg:col-span-2">
               {project.name}
             </div>
-            <div className="capitalize truncate">{project.type}</div>
+            <div className="truncate capitalize">{project.type}</div>
             <div className="col-span-2">{project.status}</div>
             <div className="col-span-2 lg:col-span-1">{formattedDate}</div>
-            <div className="col-start-8 lg:col-start-7 w-16">
+            <div className="col-start-8 w-16 lg:col-start-7">
               <AdjustmentsHorizontalIcon
-                className="h-5 w-5 mx-auto text-black hover:text-gray-500 cursor-pointer"
+                className="mx-auto h-5 w-5 cursor-pointer text-black hover:text-gray-500"
                 aria-hidden="true"
               />
             </div>

@@ -6,15 +6,15 @@ import {
 } from "@heroicons/react/20/solid";
 import { Fragment } from "react";
 
-type Props = {
+interface Props {
   children: React.ReactNode;
-};
+}
 
 const Dropdown = ({ children }: Props) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex border-2 border-gray-200 w-full justify-center rounded-md bg-white opacity-80 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+        <Menu.Button className="inline-flex w-full justify-center rounded-md border-2 border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 opacity-80 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
           {children}
           <ChevronDownIcon
             className="ml-2 -mr-1 h-5 w-5 text-gray-200 hover:text-gray-100"

@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import Dropdown from "./dropdown";
+import { render, screen } from "@testing-library/react";
 
 test("renders copmonent", () => {
   render(<Dropdown>Dropdown</Dropdown>);

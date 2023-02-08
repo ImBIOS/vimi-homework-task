@@ -1,20 +1,25 @@
-import "@fontsource/montserrat"; // Defaults to weight 400.
-import "@fontsource/montserrat/600.css"; // Weight 600.
-import "@fontsource/montserrat/700.css"; // Weight 700.
-import "@fontsource/montserrat/900.css"; // Weight 900.
+import "@fontsource/montserrat";
+// Defaults to weight 400.
+import "@fontsource/montserrat/600.css";
+// Weight 600.
+import "@fontsource/montserrat/700.css";
+// Weight 700.
+import "@fontsource/montserrat/900.css";
+import App from "./App";
+// Weight 900.
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

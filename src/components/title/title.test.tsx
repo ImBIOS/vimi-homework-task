@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import Title from "./title";
+import { render, screen } from "@testing-library/react";
 
 test("renders copmonent", () => {
   render(<Title>Title</Title>);
