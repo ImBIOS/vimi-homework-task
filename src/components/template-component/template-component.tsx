@@ -1,7 +1,5 @@
-interface Props {}
+type Props = Record<string, unknown>;
 
-const TemplateComponent = (props: Props) => {
-  return <div>TemplateComponent</div>;
-};
+const TemplateComponent = (props: Props) => <div>TemplateComponent</div>;
 
 export default TemplateComponent;

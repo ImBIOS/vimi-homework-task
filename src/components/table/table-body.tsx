@@ -1,19 +1,19 @@
 import { AdjustmentsHorizontalIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 
-interface TableBodyProps {
+type TableBodyProps = {
   data: ITableBodyData[];
   rowPerPage?: number;
-}
+};
 
-export interface ITableBodyData {
+export type ITableBodyData = {
   id: string;
   name: string;
   status: string;
   type: string;
   createdOn: string;
   archived: boolean;
-}
+};
 
 const TableBody = ({ data, rowPerPage = 5 }: TableBodyProps): JSX.Element => {
   const [page, setPage] = useState({
