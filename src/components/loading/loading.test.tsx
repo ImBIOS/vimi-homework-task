@@ -1,8 +1,8 @@
-import Dropdown from "./dropdown";
 import { render, screen } from "@testing-library/react";
+import Loading from "./loading";
 
 test("renders copmonent", () => {
-  render(<Dropdown>Dropdown</Dropdown>);
-  const childrenElement = screen.getByText(/Dropdown/i);
+  render(<Loading />);
+  const childrenElement = screen.getByText(/Loading/i);
   expect(childrenElement).toBeInTheDocument();
 });

@@ -1,11 +1,16 @@
 import { AdjustmentsHorizontalIcon } from "@heroicons/react/20/solid";
-import { useState } from "react";
 
 type TableBodyProps = {
   data: ITableBodyData[];
+  page: {
+    current: number;
+    first: number;
+    last: number;
+  };
   rowPerPage?: number;
 };
 
+// Can be indexed with string
 export type ITableBodyData = {
   id: string;
   name: string;
@@ -13,17 +18,18 @@ export type ITableBodyData = {
   type: string;
   createdOn: string;
   archived: boolean;
+  [key: string]: string | boolean;
 };
 
-const TableBody = ({ data, rowPerPage = 5 }: TableBodyProps): JSX.Element => {
-  const [page, setPage] = useState({
-    current: 1,
-    first: 1,
-    last: data.length / rowPerPage,
-  });
-  const currentData = data
-    .filter((val) => !val.archived)
-    .slice(rowPerPage * (page.current - 1), rowPerPage);
+const TableBody = ({
+  data,
+  page,
+  rowPerPage = 5,
+}: TableBodyProps): JSX.Element => {
+  const currentData = data.slice(
+    (page.current - 1) * rowPerPage,
+    page.current * rowPerPage,
+  );
 
   return (
     <section>

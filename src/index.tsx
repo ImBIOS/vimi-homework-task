@@ -1,15 +1,15 @@
-import "@fontsource/montserrat";
 // Defaults to weight 400.
-import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat";
 // Weight 600.
-import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/600.css";
 // Weight 700.
-import "@fontsource/montserrat/900.css";
-import App from "./App";
+import "@fontsource/montserrat/700.css";
 // Weight 900.
+import "@fontsource/montserrat/900.css";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
