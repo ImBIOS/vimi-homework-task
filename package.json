@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "homepage": "https://github.com/ImBIOS/vimi-homework-task",
   "dependencies": {
     "@fontsource/montserrat": "^4.5.14",
     "@headlessui/react": "^1.7.10",
