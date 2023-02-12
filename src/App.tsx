@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import Container from "./components/container/container";
 import Dropdown from "./components/dropdown/dropdown";
@@ -108,24 +107,24 @@ function App(): JSX.Element {
     document.title = "Awesome React Table";
 
     // Get random name
-    axios
-      .get(
-        `https://jsonplaceholder.typicode.com/users/${Math.floor(
-          Math.random() * 10,
-        )}`,
-      )
+    fetch(
+      `https://jsonplaceholder.typicode.com/users/${Math.floor(
+        Math.random() * 10,
+      )}`,
+    )
+      .then((res) => res.json())
       .then((res) => {
-        setUsername(res.data.name.split(" ")[0]);
+        setUsername(res.name.split(" ")[0]);
       });
 
     // Get projects
-    axios
-      .get(
-        "https://raw.githubusercontent.com/ImBIOS/mock-projects-db/master/db.json",
-      )
+    fetch(
+      "https://raw.githubusercontent.com/ImBIOS/mock-projects-db/master/db.json",
+    )
+      .then((res) => res.json())
       .then((res) => {
-        setFetchedData(res.data.data);
-        setFilteredProject(res.data.data);
+        setFetchedData(res.data);
+        setFilteredProject(res.data);
       });
   }, []);
 
