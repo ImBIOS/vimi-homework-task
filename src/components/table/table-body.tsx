@@ -45,7 +45,7 @@ const TableBody = ({
         return (
           <div
             key={project.id}
-            className="mb-4 grid grid-cols-6 gap-4 rounded-lg bg-white py-3 pr-6 pl-8 text-left font-semibold"
+            className="mb-4 grid grid-cols-6 gap-4 rounded-lg bg-white py-3 pr-6 pl-8 text-left font-semibold dark:bg-gray-600 dark:text-gray-200"
           >
             <div className="col-span-1 truncate lg:col-span-2">
               {project.name}
@@ -55,7 +55,7 @@ const TableBody = ({
             <div className="col-span-2 lg:col-span-1">{formattedDate}</div>
             <div className="col-start-8 w-16 lg:col-start-7">
               <AdjustmentsHorizontalIcon
-                className="mx-auto h-5 w-5 cursor-pointer text-black hover:text-gray-500"
+                className="mx-auto h-5 w-5 cursor-pointer text-black hover:text-gray-500 dark:text-gray-200"
                 aria-hidden="true"
               />
             </div>

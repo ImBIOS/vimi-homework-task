@@ -39,4 +39,25 @@ const useSortStore = create<SortState>()(
   ),
 );
 
-export { useQueryStore, useSortStore };
+interface ThemeState {
+  theme: string;
+  setTheme: (text: string) => void;
+  clearTheme: () => void;
+}
+
+const useThemeStore = create<ThemeState>()(
+  devtools(
+    persist(
+      (set) => ({
+        theme: "",
+        setTheme: (text) => set(() => ({ theme: text })),
+        clearTheme: () => set(() => ({ theme: "" })),
+      }),
+      {
+        name: "theme-storage",
+      },
+    ),
+  ),
+);
+
+export { useQueryStore, useSortStore, useThemeStore };

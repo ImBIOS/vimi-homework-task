@@ -39,12 +39,12 @@ const Dropdown = ({
       )}
     >
       <div>
-        <Menu.Button className="inline-flex w-64 justify-center rounded-md border-2 border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 opacity-80 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+        <Menu.Button className="inline-flex w-64 justify-center rounded-md border-2 border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 opacity-80 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:border-gray-800 dark:bg-opacity-20 dark:text-gray-400">
           {sort === ""
             ? children
             : menu.find((item) => item.value === sort)?.name}
           <ChevronDownIcon
-            className="ml-2 -mr-1 h-5 w-5 text-gray-200 hover:text-gray-100"
+            className="ml-2 -mr-1 h-5 w-5 text-gray-200 hover:text-gray-100 dark:text-gray-800"
             aria-hidden="true"
           />
         </Menu.Button>

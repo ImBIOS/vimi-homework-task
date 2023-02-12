@@ -4,6 +4,7 @@ import Dropdown from "./components/dropdown/dropdown";
 import Search from "./components/search";
 import Table from "./components/table";
 import { ITableBodyData } from "./components/table/table-body";
+import ThemeSelector from "./components/theme-selector";
 import Title from "./components/title/title";
 import { useQueryStore, useSortStore } from "./lib/store";
 
@@ -155,7 +156,7 @@ function App(): JSX.Element {
         </Title>
         <p>Here are the list of projects you submitted.</p>
       </header>
-      <section className="rounded-lg bg-white bg-opacity-40 px-4 py-8 backdrop-blur-lg backdrop-filter">
+      <section className="rounded-lg bg-white bg-opacity-40 px-4 py-8 backdrop-blur-lg backdrop-filter dark:bg-gray-800 dark:bg-opacity-40">
         <section className="flex items-center justify-between">
           <Title className="ml-4">Recent Projects</Title>
           <section className="flex items-center justify-between">
@@ -163,6 +164,7 @@ function App(): JSX.Element {
             <Dropdown handleValueChange={handleSortChange} className="ml-8">
               Sort by
             </Dropdown>
+            <ThemeSelector className="ml-4" />
           </section>
         </section>
         {filteredProject ? (

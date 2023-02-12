@@ -78,7 +78,7 @@ const Pagination = ({ page, handlePageChange }: Props) => {
     <div className="flex justify-center">
       <div className="flex">
         <button
-          className="rounded-l bg-gray-300 px-4 py-2 hover:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-300"
+          className="rounded-l bg-gray-300 px-4 py-2 hover:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-300 dark:bg-gray-700 active:dark:bg-gray-500"
           onClick={() => handleGoToSpecificPage(page.current - 1)}
           disabled={page.current === page.first}
         >
@@ -90,8 +90,8 @@ const Pagination = ({ page, handlePageChange }: Props) => {
             <button
               key={pageNumber}
               className={twMerge(
-                "bg-gray-300 px-4 py-2 hover:bg-gray-400",
-                pageNumber === page.current && "bg-gray-400",
+                "bg-gray-300 px-4 py-2 hover:bg-gray-400 dark:bg-gray-700",
+                pageNumber === page.current && "bg-gray-400 dark:bg-gray-600",
               )}
               onClick={() => handleGoToSpecificPage(pageNumber)}
             >
@@ -101,7 +101,7 @@ const Pagination = ({ page, handlePageChange }: Props) => {
         })}
 
         <button
-          className="rounded-r bg-gray-300 px-4 py-2 hover:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-300"
+          className="rounded-r bg-gray-300 px-4 py-2 hover:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-300 dark:bg-gray-700 active:dark:bg-gray-500"
           onClick={() => handleGoToSpecificPage(page.current + 1)}
           disabled={page.current === page.last}
         >
